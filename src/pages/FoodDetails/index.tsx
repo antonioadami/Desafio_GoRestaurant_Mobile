@@ -156,7 +156,7 @@ const FoodDetails: React.FC = () => {
       extrasTotal += extra.value * extra.quantity;
     });
 
-    return foodTotal + extrasTotal;
+    return formatValue(foodTotal + extrasTotal);
   }, [extras, food, foodQuantity]);
 
   async function handleFinishOrder(): Promise<void> {
